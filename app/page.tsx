@@ -292,24 +292,180 @@ if (heroRef.current) {
           <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
             About
           </p>
+
           <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
-            How I think
+            Who I am, how I think, and why I do this
           </h2>
 
-          <div className="about-copy mt-10 max-w-4xl space-y-6 text-lg leading-8 text-gray-400">
-            <p>
-              I start with the decision that needs to be made, then work backward
-              to design the data, workflow, and system required to support it.
-            </p>
-            <p>
-              I prefer problems with ambiguity, constraints, and incomplete
-              information. Those conditions are where good systems, sound judgment,
-              and clear communication matter most.
-            </p>
-            <p>
-              I measure technical work by outcomes: time saved, risk reduced,
-              insight generated, and capability created.
-            </p>
+          <div className="mt-16 grid gap-12">
+            <section className="about-copy grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+                  Who I Am
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-white md:text-3xl">
+                  An operator, builder, and strategic thinker focused on solving hard problems
+                </h3>
+
+                <div className="mt-6 space-y-6 text-lg leading-8 text-gray-400">
+                  <p>
+                    I am a transitioning intelligence and technical program leader focused on
+                    applied AI, systems integration, and strategic problem-solving. My background
+                    sits at the intersection of operations, analysis, and innovation—building
+                    tools and workflows that turn fragmented information into decisions,
+                    capability, and measurable outcomes.
+                  </p>
+
+                  <p>
+                    I have worked in environments defined by ambiguity, pressure, and incomplete
+                    information. That experience shaped how I approach technology: not as an end
+                    in itself, but as a way to improve judgment, speed, and real-world
+                    effectiveness.
+                  </p>
+
+                  <p>
+                    Today, I am translating that experience into public, unclassified work across
+                    defense tech, strategy, and innovation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                  <img
+                    src="/sere-graduation.jpg"
+                    alt="Service photo"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section className="about-copy grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+                  How I Think
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-white md:text-3xl">
+                  Start with the decision, then build backward from what it takes to support it
+                </h3>
+
+                <div className="mt-6 space-y-6 text-lg leading-8 text-gray-400">
+                  <p>
+                    I start with the decision that needs to be made. From there, I work backward
+                    to identify the data, workflow, and system needed to support it.
+                  </p>
+
+                  <p>
+                    I prefer problems with ambiguity, constraints, and incomplete information,
+                    because those are the conditions where clear thinking, sound systems, and
+                    good judgment matter most.
+                  </p>
+
+                  <p>
+                    I measure technical work by outcomes: time saved, insight generated, risk
+                    reduced, and capability created.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+                <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+                  Process
+                </p>
+
+                <div className="mt-8 grid gap-4 md:grid-cols-4 md:items-center">
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+                      Step 1
+                    </p>
+                    <h4 className="mt-3 text-lg font-medium text-white">
+                      Decision
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-gray-400">
+                      Define the decision that actually matters
+                    </p>
+                  </div>
+
+                  <div className="hidden text-center text-2xl text-gray-600 md:block">
+                    →
+                  </div>
+
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+                      Step 2
+                    </p>
+                    <h4 className="mt-3 text-lg font-medium text-white">
+                      Data
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-gray-400">
+                      Structure the inputs needed to support it
+                    </p>
+                  </div>
+
+                  <div className="hidden text-center text-2xl text-gray-600 md:block">
+                    →
+                  </div>
+
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+                      Step 3
+                    </p>
+                    <h4 className="mt-3 text-lg font-medium text-white">
+                      System
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-gray-400">
+                      Build the workflow or tool that creates leverage
+                    </p>
+                  </div>
+
+                  <div className="hidden text-center text-2xl text-gray-600 md:block">
+                    →
+                  </div>
+
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-span-1">
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+                      Step 4
+                    </p>
+                    <h4 className="mt-3 text-lg font-medium text-white">
+                      Outcome
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-gray-400">
+                      Measure results in speed, insight, and capability
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="about-copy rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-10 md:px-10 md:py-12">
+              <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+                Why I Do This
+              </p>
+
+              <h3 className="mt-3 max-w-4xl text-2xl font-semibold leading-tight text-white md:text-3xl">
+                To solve the impossible, so that we build a better future
+              </h3>
+
+              <div className="mt-6 max-w-4xl space-y-6 text-lg leading-8 text-gray-400">
+                <p>
+                  I am driven by hard problems—especially the kind that sit between technology,
+                  people, and strategy. The work that matters most to me is the work that creates
+                  real leverage: better systems, better decisions, and better futures.
+                </p>
+
+                <p>
+                  That idea sits underneath everything on this site, from technical projects to
+                  strategic writing. I am most energized by work that turns complexity into
+                  clarity and ideas into capability.
+                </p>
+
+                <p>
+                  In practice, that means building things that are useful, thoughtful, and
+                  grounded in reality—work that does more than sound good on paper.
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </section>
