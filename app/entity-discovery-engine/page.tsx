@@ -1,6 +1,42 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function EntityDiscoveryEnginePage() {
+  const pageRef = useRef<HTMLDivElement>(null);
+  const systemViewRef = useRef<HTMLElement>(null);
+    useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (!systemViewRef.current) return;
+
+      const cards = systemViewRef.current.querySelectorAll(".system-card");
+
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: systemViewRef.current,
+            start: "top 75%",
+            once: true,
+          },
+        }
+      );
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <main className="min-h-screen bg-black px-6 py-24 text-white">
+    <main ref={pageRef} className="min-h-screen bg-black px-6 py-24 text-white">
       <div className="mx-auto max-w-5xl">
         <a
           href="/"
@@ -48,7 +84,7 @@ export default function EntityDiscoveryEnginePage() {
           </div>
         </div>
 
-<section className="mt-16">
+<section ref={systemViewRef} className="mt-16">
   <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
     <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div>
@@ -67,7 +103,7 @@ export default function EntityDiscoveryEnginePage() {
     </div>
 
     <div className="mt-10 grid gap-4 md:grid-cols-5 md:items-center">
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+      <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           Input
         </p>
@@ -79,7 +115,7 @@ export default function EntityDiscoveryEnginePage() {
 
       <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
 
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+      <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           Processing
         </p>
@@ -93,7 +129,7 @@ export default function EntityDiscoveryEnginePage() {
 
       <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
 
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+      <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           Model
         </p>
@@ -107,7 +143,7 @@ export default function EntityDiscoveryEnginePage() {
     </div>
 
     <div className="mt-4 grid gap-4 md:grid-cols-5 md:items-center">
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-start-2">
+      <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-start-2">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           Human-in-the-loop
         </p>
@@ -119,7 +155,7 @@ export default function EntityDiscoveryEnginePage() {
 
       <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
 
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-span-2">
+      <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-span-2">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
           Output
         </p>
