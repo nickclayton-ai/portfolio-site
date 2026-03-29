@@ -307,22 +307,54 @@ if (heroRef.current) {
         </div>
       </section>
 
-      <footer id="contact" className="border-t border-white/10 px-6 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
-              Contact
-            </p>
-            <p className="mt-2 text-gray-400">
-              GitHub • LinkedIn • Resume • Email
-            </p>
-          </div>
+<footer id="contact" className="border-t border-white/10 px-6 py-10">
+  <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+        Contact
+      </p>
 
-          <div className="text-sm text-gray-500">
-            Portfolio shell in progress
-          </div>
-        </div>
-      </footer>
+      <div className="mt-3 flex flex-wrap gap-4 text-sm text-gray-300">
+        <a
+          href="https://github.com/nickclayton-ai"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-white"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nick-clayton5"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-white"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          className="transition hover:text-white"
+        >
+          Resume
+        </a>
+
+        <a
+          href="mailto:nickclayton5@gmail.com"
+          className="transition hover:text-white"
+        >
+          Email
+        </a>
+      </div>
+    </div>
+
+    <div className="text-sm text-gray-500">
+      Built with Next.js · Deployed on Vercel
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
