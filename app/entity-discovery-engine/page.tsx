@@ -48,6 +48,93 @@ export default function EntityDiscoveryEnginePage() {
           </div>
         </div>
 
+<section className="mt-16">
+  <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+          System View
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-white">
+          End-to-end workflow architecture
+        </h2>
+      </div>
+
+      <p className="max-w-2xl text-sm leading-7 text-gray-400">
+        A simplified public view of how the system moves from fragmented inputs
+        to machine-assisted discovery and human-reviewed outputs.
+      </p>
+    </div>
+
+    <div className="mt-10 grid gap-4 md:grid-cols-5 md:items-center">
+      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+        <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+          Input
+        </p>
+        <h3 className="mt-3 text-lg font-medium text-white">Data Sources</h3>
+        <p className="mt-2 text-sm leading-6 text-gray-400">
+          Structured and semi-structured records
+        </p>
+      </div>
+
+      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+        <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+          Processing
+        </p>
+        <h3 className="mt-3 text-lg font-medium text-white">
+          Feature Structuring
+        </h3>
+        <p className="mt-2 text-sm leading-6 text-gray-400">
+          Normalize and prepare data for analysis
+        </p>
+      </div>
+
+      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+        <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+          Model
+        </p>
+        <h3 className="mt-3 text-lg font-medium text-white">
+          Clustering Engine
+        </h3>
+        <p className="mt-2 text-sm leading-6 text-gray-400">
+          Group related records and surface candidates
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-4 grid gap-4 md:grid-cols-5 md:items-center">
+      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-start-2">
+        <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+          Human-in-the-loop
+        </p>
+        <h3 className="mt-3 text-lg font-medium text-white">Analyst Review</h3>
+        <p className="mt-2 text-sm leading-6 text-gray-400">
+          Validate, refine, and prioritize results
+        </p>
+      </div>
+
+      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-span-2">
+        <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+          Output
+        </p>
+        <h3 className="mt-3 text-lg font-medium text-white">
+          Actionable Discovery
+        </h3>
+        <p className="mt-2 text-sm leading-6 text-gray-400">
+          Machine-prioritized candidates that support faster insight and better
+          decision-making
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</section>
         <section className="mt-16">
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
