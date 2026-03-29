@@ -147,27 +147,34 @@ if (heroRef.current) {
         ref={heroRef}
         className="flex min-h-screen items-center justify-center px-6 pt-24"
       >
-        <div ref={heroInnerRef} className="max-w-5xl text-center">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-gray-500">
-            Applied AI • Systems Thinking • Strategy
-          </p>
+<div
+  ref={heroInnerRef}
+  className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2"
+>
+  <div className="text-left">
+    <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+      AI · Systems · Strategy
+    </p>
 
-<div className="relative mx-auto h-40 max-w-4xl md:h-48">
-  <div className="hero-line absolute inset-0 flex items-center justify-center text-4xl font-semibold leading-tight md:text-6xl">
-    I build systems.
+    <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
+      Building systems that turn complexity into decision advantage.
+    </h1>
+
+    <p className="mt-6 max-w-xl text-lg leading-8 text-gray-400">
+      I design and deploy data-driven tools that transform fragmented
+      information into actionable insight—bridging AI, operations, and
+      strategy.
+    </p>
   </div>
-  <div className="hero-line absolute inset-0 flex items-center justify-center text-4xl font-semibold leading-tight md:text-6xl">
-    I turn ambiguity into decisions.
-  </div>
-  <div className="hero-line absolute inset-0 flex items-center justify-center text-4xl font-semibold leading-tight md:text-6xl">
-    I create measurable outcomes.
+
+  <div className="flex justify-center md:justify-end">
+    <img
+      src="/headshot.jpg"
+      alt="Headshot"
+      className="h-64 w-64 rounded-2xl object-cover border border-white/10"
+    />
   </div>
 </div>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            A portfolio of applied AI projects, strategic thought, and public writing.
-          </p>
-        </div>
       </section>
 
       <section id="projects" ref={projectsRef} className="px-6 py-24">
