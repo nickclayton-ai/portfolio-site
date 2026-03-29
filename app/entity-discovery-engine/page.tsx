@@ -9,28 +9,43 @@ gsap.registerPlugin(ScrollTrigger);
 export default function EntityDiscoveryEnginePage() {
   const pageRef = useRef<HTMLDivElement>(null);
   const systemViewRef = useRef<HTMLElement>(null);
-    useEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       if (!systemViewRef.current) return;
 
-      const cards = systemViewRef.current.querySelectorAll(".system-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".system-card");
+      const arrows = gsap.utils.toArray<HTMLElement>(".system-arrow");
 
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 30 },
-        {
+      gsap.set(cards, { opacity: 0, y: 40 });
+      gsap.set(arrows, { opacity: 0 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: systemViewRef.current,
+          start: "top top",
+          end: "+=280%",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+
+      cards.forEach((card, index) => {
+        tl.to(card, {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          stagger: 0.12,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: systemViewRef.current,
-            start: "top 75%",
-            once: true,
-          },
+          duration: 0.6,
+          ease: "power2.out",
+        });
+
+        if (arrows[index]) {
+          tl.to(arrows[index], {
+            opacity: 1,
+            duration: 0.3,
+            ease: "power1.out",
+          });
         }
-      );
+      });
     }, pageRef);
 
     return () => ctx.revert();
@@ -113,7 +128,7 @@ export default function EntityDiscoveryEnginePage() {
         </p>
       </div>
 
-      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+      <div className="system-arrow hidden text-center text-2xl text-gray-600 md:block">→</div>
 
       <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
@@ -127,7 +142,7 @@ export default function EntityDiscoveryEnginePage() {
         </p>
       </div>
 
-      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+      <div className="system-arrow hidden text-center text-2xl text-gray-600 md:block">→</div>
 
       <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
@@ -153,7 +168,7 @@ export default function EntityDiscoveryEnginePage() {
         </p>
       </div>
 
-      <div className="hidden text-center text-2xl text-gray-600 md:block">→</div>
+      <div className="system-arrow hidden text-center text-2xl text-gray-600 md:block">→</div>
 
       <div className="system-card rounded-2xl border border-white/10 bg-black/30 p-5 text-center md:col-span-2">
         <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
