@@ -23,7 +23,7 @@ export default function EntityDiscoveryEnginePage() {
         scrollTrigger: {
           trigger: systemViewRef.current,
           start: "top top",
-          end: "+=280%",
+          end: "+=220%",
           scrub: true,
           pin: true,
           anticipatePin: 1,
