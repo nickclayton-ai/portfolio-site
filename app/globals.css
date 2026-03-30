@@ -48,13 +48,13 @@ body {
   background-position: 0% 50%;
   opacity: 0;
   transition: opacity 0.25s ease;
-  animation: projectBorderRun 2s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
 
 .project-glow:hover::before {
   opacity: 1;
+  animation: projectBorderRun 2.8s linear infinite;
 }
 
 .project-glow-inner {
