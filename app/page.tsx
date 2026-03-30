@@ -39,45 +39,66 @@ export default function Home() {
         );
       }
 
-if (heroRef.current) {
-  const lines = gsap.utils.toArray<HTMLElement>(".hero-line");
+if (heroRef.current && heroInnerRef.current) {
+  const line1 = heroInnerRef.current.querySelector(".hero-line-1");
+  const line2 = heroInnerRef.current.querySelector(".hero-line-2");
+  const line3 = heroInnerRef.current.querySelector(".hero-line-3");
+  const image = heroInnerRef.current.querySelector(".hero-image");
+  const subtitle = heroInnerRef.current.querySelector(".hero-subtitle");
 
-  gsap.set(lines, { opacity: 0, y: 30 });
+  gsap.set([line1, line2, line3, image, subtitle], {
+    opacity: 0,
+    y: 30,
+  });
 
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: heroRef.current,
       start: "top top",
-      end: "+=260%",
+      end: "+=220%",
       scrub: true,
       pin: true,
       anticipatePin: 1,
     },
   });
 
-  lines.forEach((line, index) => {
-    tl.to(line, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: "power2.out",
-    });
-
-    if (index !== lines.length - 1) {
-      tl.to(line, {
-        opacity: 0,
-        y: -30,
-        duration: 0.8,
-        ease: "power2.inOut",
-      }, "+=0.6");
-    }
-  });
-
-  tl.to(lines[lines.length - 1], {
+  tl.to([line1, image], {
     opacity: 1,
     y: 0,
-    duration: 0.4,
-  });
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.1,
+  })
+    .to(
+      line2,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+      },
+      "+=0.35"
+    )
+    .to(
+      line3,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power2.out",
+      },
+      "+=0.35"
+    )
+    .to(
+      subtitle,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      },
+      "+=0.25"
+    );
 }
 
       const sectionConfigs = [
@@ -156,11 +177,21 @@ if (heroRef.current) {
       AI · Systems · Strategy
     </p>
 
-    <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-      Building systems that turn complexity into decision advantage.
-    </h1>
+    <div className="mt-4 space-y-4">
+      <div className="hero-line hero-line-1 text-4xl font-semibold leading-tight text-white md:text-6xl">
+        Building systems
+      </div>
 
-    <p className="mt-6 max-w-xl text-lg leading-8 text-gray-400">
+      <div className="hero-line hero-line-2 text-4xl font-semibold leading-tight text-white md:text-6xl">
+        that turn complexity
+      </div>
+
+      <div className="hero-line hero-line-3 text-4xl font-semibold leading-tight text-white md:text-6xl">
+        into decision advantage.
+      </div>
+    </div>
+
+    <p className="hero-subtitle mt-6 max-w-xl text-lg leading-8 text-gray-400">
       I design and deploy data-driven tools that transform fragmented
       information into actionable insight—bridging AI, operations, and
       strategy.
@@ -171,7 +202,7 @@ if (heroRef.current) {
     <img
       src="/headshot.jpg"
       alt="Headshot"
-      className="h-64 w-64 rounded-2xl object-cover border border-white/10"
+      className="hero-image h-64 w-64 rounded-2xl border border-white/10 object-cover md:h-80 md:w-80"
     />
   </div>
 </div>
