@@ -229,7 +229,7 @@ if (heroRef.current && heroInnerRef.current) {
           <div className="grid gap-6">
 <a
   href="/entity-discovery-engine"
-  className="project-card block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:border-white/20 hover:bg-white/[0.05]"
+  className="project-card project-glow block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
 >
   <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
     Applied AI / Data Systems
@@ -246,7 +246,7 @@ if (heroRef.current && heroInnerRef.current) {
 
 <a
   href="/operational-decision-dashboard"
-  className="project-card block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:border-white/20 hover:bg-white/[0.05]"
+  className="project-card project-glow block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
 >
   <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
     Decision Support
@@ -262,7 +262,7 @@ if (heroRef.current && heroInnerRef.current) {
 
 <a
   href="/applied-ai-workflow-tool"
-  className="project-card block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:border-white/20 hover:bg-white/[0.05]"
+  className="project-card project-glow block rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
 >
   <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
     Workflow Augmentation
