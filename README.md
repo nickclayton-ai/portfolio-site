@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nick Clayton — Portfolio
 
-## Getting Started
+![Portfolio Preview](./public/headshot.png)
 
-First, run the development server:
+Live Site: https://nickclayton-ai.com
+
+---
+
+## Overview
+
+This portfolio showcases applied work at the intersection of AI, systems design, and strategic problem-solving.
+
+The focus is on building tools and workflows that transform fragmented data into actionable insight — bridging operations, analysis, and technology.
+
+---
+
+## Core Themes
+
+- Applied AI and data-driven systems  
+- Decision support and workflow design  
+- Translating complex problems into scalable solutions  
+- Real-world impact over theoretical models  
+
+---
+
+## Featured Projects
+
+### Entity Discovery Engine
+A machine learning-enabled workflow for identifying patterns, clustering related entities, and surfacing hidden relationships in large datasets.
+
+### Operational Decision Dashboard
+A concept dashboard designed to transform fragmented information into clear, actionable insight for faster decision-making.
+
+### Applied AI Workflow Tool
+A practical system for improving analyst workflows through AI-assisted processes, enabling faster iteration and scalable outputs.
+
+---
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- GSAP (scroll-based animation)
+- Vercel (deployment)
+
+---
+
+## Purpose
+
+This site is designed not as a static portfolio, but as a working demonstration of how systems thinking, AI, and design can be combined to solve real-world problems.
+
+---
+
+## Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
