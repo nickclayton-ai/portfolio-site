@@ -200,8 +200,8 @@ if (heroRef.current && heroInnerRef.current) {
 
   <div className="flex justify-center md:justify-end">
     <img
-      src="/headshot.jpg"
-      alt="Headshot"
+      src="/headshot.png"
+      alt="headshot"
       className="hero-image h-64 w-64 rounded-2xl border border-white/10 object-cover md:h-80 md:w-80"
     />
   </div>
