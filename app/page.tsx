@@ -45,8 +45,9 @@ if (heroRef.current && heroInnerRef.current) {
   const line3 = heroInnerRef.current.querySelector(".hero-line-3");
   const image = heroInnerRef.current.querySelector(".hero-image");
   const subtitle = heroInnerRef.current.querySelector(".hero-subtitle");
+  const cta = heroInnerRef.current.querySelector(".hero-cta");
 
-  gsap.set([line1, line2, line3, image, subtitle], {
+  gsap.set([line1, line2, line3, image, subtitle, cta], {
     opacity: 0,
     y: 30,
   });
@@ -98,6 +99,16 @@ if (heroRef.current && heroInnerRef.current) {
         ease: "power2.out",
       },
       "+=0.25"
+    )
+    .to(
+      cta,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power2.out",
+      },
+      "+=0.15"
     );
 }
 
@@ -196,6 +207,17 @@ if (heroRef.current && heroInnerRef.current) {
       information into actionable insight—bridging AI, operations, and
       strategy.
     </p>
+
+    <div className="mt-8 flex gap-4">
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        className="hero-cta rounded-xl border border-white/20 px-6 py-3 text-sm text-white transition hover:border-white hover:bg-white/5"
+      >
+        View Resume
+      </a>
+    </div>
   </div>
 
   <div className="flex justify-center md:justify-end">
@@ -536,6 +558,7 @@ if (heroRef.current && heroInnerRef.current) {
         <a
           href="/resume.pdf"
           target="_blank"
+          rel="noreferrer"
           className="transition hover:text-white"
         >
           Resume
