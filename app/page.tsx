@@ -202,7 +202,7 @@ if (heroRef.current && heroInnerRef.current) {
     <img
       src="/headshot.png"
       alt="headshot"
-      className="hero-image h-64 w-64 rounded-2xl border border-white/10 object-cover md:h-80 md:w-80"
+      className="hero-image h-64 w-64 rounded-2xl border border-white/10 object-cover object-[50%_20%] md:h-80 md:w-80"
     />
   </div>
 </div>
