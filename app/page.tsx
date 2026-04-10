@@ -392,7 +392,7 @@ if (heroRef.current && heroInnerRef.current) {
               <div className="flex justify-center md:justify-end">
                 <div className="w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
                   <img
-                    src="/sere-graduation.jpg"
+                    src="/sere-graduation.png"
                     alt="Service photo"
                     className="h-full w-full object-cover"
                   />
