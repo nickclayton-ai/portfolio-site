@@ -394,7 +394,7 @@ if (heroRef.current && heroInnerRef.current) {
                  <img
                    src="/sere-graduation.png"
                    alt="SERE graduation"
-                    className="w-full h-full object-cover object-[60%_35%] hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-[55%_30%] hover:scale-105 transition-transform duration-300"
                  />
                 </div>
                </div>
