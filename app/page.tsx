@@ -390,14 +390,14 @@ if (heroRef.current && heroInnerRef.current) {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-                  <img
-                    src="/sere-graduation.png"
-                    alt="Service photo"
-                    className="h-full w-full object-cover"
-                  />
+                <div className="w-full max-w-md h-[420px] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                 <img
+                   src="/sere-graduation.png"
+                   alt="SERE graduation"
+                    className="w-full h-full object-cover object-[60%_35%] hover:scale-105 transition-transform duration-300"
+                 />
                 </div>
-              </div>
+               </div>
             </section>
 
             <section className="about-copy grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
