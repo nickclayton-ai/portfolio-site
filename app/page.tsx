@@ -308,43 +308,62 @@ if (heroRef.current && heroInnerRef.current) {
       </section>
 
       <section id="writing" ref={writingRef} className="bg-neutral-950 px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
-            Writing
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.25em] text-gray-500">
+      Writing
+    </p>
+
+    <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
+      Strategy, policy, and thought leadership
+    </h2>
+
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+
+      <a
+        href="/writing/strategic-analysis"
+        className="writing-card project-glow block rounded-3xl"
+      >
+        <div className="project-glow-inner rounded-3xl p-8">
+          <h3 className="text-xl font-medium">Strategic Analysis</h3>
+
+          <p className="mt-4 text-gray-400">
+            Essays and analysis on competition, coercion, innovation,
+            and the changing strategic environment.
           </p>
-<h2 className="mt-2 text-3xl font-semibold md:text-4xl">
-  <a href="/writing" className="transition hover:text-gray-300">
-    Strategy, policy, and thought leadership
-  </a>
-</h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <article className="writing-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
-              <h3 className="text-xl font-medium">Strategic Analysis</h3>
-              <p className="mt-4 text-gray-400">
-                Essays and analysis on competition, coercion, innovation, and
-                the changing strategic environment.
-              </p>
-            </article>
-
-            <article className="writing-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
-              <h3 className="text-xl font-medium">Policy Writing</h3>
-              <p className="mt-4 text-gray-400">
-                Research-driven work connecting technology, economic security,
-                and national strategy.
-              </p>
-            </article>
-
-            <article className="writing-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
-              <h3 className="text-xl font-medium">Innovation Thinking</h3>
-              <p className="mt-4 text-gray-400">
-                Public reflections on building better systems, applied AI, and
-                solving hard problems under real-world constraints.
-              </p>
-            </article>
-          </div>
         </div>
-      </section>
+      </a>
+
+      <a
+        href="/writing/policy-writing"
+        className="writing-card project-glow block rounded-3xl"
+      >
+        <div className="project-glow-inner rounded-3xl p-8">
+          <h3 className="text-xl font-medium">Policy Writing</h3>
+
+          <p className="mt-4 text-gray-400">
+            Research-driven work connecting technology, economic
+            security, and national strategy.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="/writing/innovation-thinking"
+        className="writing-card project-glow block rounded-3xl"
+      >
+        <div className="project-glow-inner rounded-3xl p-8">
+          <h3 className="text-xl font-medium">Innovation Thinking</h3>
+
+          <p className="mt-4 text-gray-400">
+            Public reflections on building better systems, applied AI,
+            and solving hard problems under real-world constraints.
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
       <section id="about" ref={aboutRef} className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
